@@ -1,0 +1,60 @@
+$theme-color: white; // 主题色
+
+// 设置所有元素没有内外边距
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// 按钮样式调整
+.el-button {
+  border-color: $theme-color;
+  color: $theme-color;
+  background-color: transparent;
+
+  // 有些没有icon的按钮，文本（位于span里）会和按钮边界重合，这个设置就是为了有一定边距，更美观
+  //   i, span {
+  //     margin-left: 10px;
+  //     margin-right: 10px;
+  //   }
+}
+
+// 卡片样式调整
+.el-card {
+  background-color: transparent;
+  color: $theme-color;
+}
+
+// 输入框样式调整
+.el-input {
+  // 输入框前置的组件样式调整
+  .el-input-group__prepend {
+    background-color: transparent;
+
+    .el-icon {
+      color: $theme-color;
+    }
+  }
+
+  // 输入框中间样式调整
+  .el-input__wrapper {
+    background-color: transparent;
+  }
+
+  // 输入框后置组件样式调整
+  .el-input-group__append {
+    background-color: transparent;
+
+    .el-icon {
+      color: $theme-color;
+    }
+  }
+}
+
+.el-input__inner {
+  color: $theme-color; // 修改输入文本的颜色
+}
+
+.el-input__inner::placeholder {
+  color: $theme-color; // 修改占位文本的颜色
+}
